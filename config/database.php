@@ -79,40 +79,7 @@ return [
             'prefix'   => env('DB_PREFIX', ''),
         ],
 
-        # custom
-        'mysql_web' => [
-            'driver'      => 'mysql',
-            'host'        => env('DB_SQL_WEB_HOST', '127.0.0.1'),
-            'port'        => env('DB_SQL_WEB_PORT', 3306),
-            'database'    => 'aa_web',
-            'username'    => env('DB_SQL_WEB_USERNAME', 'forge'),
-            'password'    => env('DB_SQL_WEB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset'     => env('DB_CHARSET', 'utf8mb4'),
-            'collation'   => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
-            'prefix'      => env('DB_PREFIX', 'h_'),
-            'strict'      => env('DB_STRICT_MODE', true),
-            'engine'      => env('DB_ENGINE', null),
-            'timezone'    => env('DB_TIMEZONE', '+07:00'),
-        ],
-
-        'mysql_article' => [
-            'driver'      => 'mysql',
-            'host'        => env('DB_SQL_WEB_HOST', '127.0.0.1'),
-            'port'        => env('DB_SQL_WEB_PORT', 3306),
-            'database'    => 'aa_article',
-            'username'    => env('DB_SQL_WEB_USERNAME', 'forge'),
-            'password'    => env('DB_SQL_WEB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset'     => env('DB_CHARSET', 'utf8mb4'),
-            'collation'   => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
-            'prefix'      => env('DB_PREFIX', 'h_'),
-            'strict'      => env('DB_STRICT_MODE', true),
-            'engine'      => env('DB_ENGINE', null),
-            'timezone'    => env('DB_TIMEZONE', '+07:00'),
-        ],
-    ],
-
+     
     /*
     |--------------------------------------------------------------------------
     | Migration Repository Table
