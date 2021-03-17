@@ -12,14 +12,14 @@ class PostModel
     {
 
         if (!empty($category)) {
-            return DB::connection('mysql_article')
+            return DB::connection('mysql')
                 ->table('article_category')
                 ->select('description')
                 ->where('name', '=', $category)
                 ->get();
         }
 
-        return DB::connection('mysql_article')
+        return DB::connection('mysql')
             ->table('article_category')
             ->select('description', 'category_id')
             ->whereNotNull('description')
@@ -28,7 +28,7 @@ class PostModel
 
     public static function isPostRawExist($title)
     {
-        $title = DB::connection('mysql_article')
+        $title = DB::connection('mysql')
             ->table('article_post_raw')
             ->select('title')
             ->where('title', '=', $title)
@@ -41,7 +41,7 @@ class PostModel
     {
         try {
 
-            DB::connection('mysql_article')
+            DB::connection('mysql')
                 ->table('article_post_copy')
                 ->insert([
                     'name'          => $data['name'],
@@ -66,7 +66,7 @@ class PostModel
 
     public static function isPostExits($name)
     {
-        $dbName = DB::connection('mysql_article')
+        $dbName = DB::connection('mysql')
             ->table('article_post_copy')
             ->select('name')
             ->where('name', '=', $name)
@@ -77,7 +77,7 @@ class PostModel
 
     public static function insertRawPost($data)
     {
-        return DB::connection('mysql_article')
+        return DB::connection('mysql')
             ->table('article_post_raw')
             ->insert([
                 'title'        => $data['title'],
@@ -94,7 +94,7 @@ class PostModel
 
     public static function getRawPosts()
     {
-        return DB::connection('mysql_article')
+        return DB::connection('mysql')
             ->table('article_post_raw')
             ->get();
     }
